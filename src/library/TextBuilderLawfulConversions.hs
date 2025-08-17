@@ -17,7 +17,6 @@ module TextBuilderLawfulConversions
 where
 
 import LawfulConversions (Is, IsMany, IsSome)
-import TextBuilder (TextBuilder)
 import TextBuilderLawfulConversions.LazyBuilder ()
 import TextBuilderLawfulConversions.LazyText ()
 import TextBuilderLawfulConversions.StrictBuilder ()
