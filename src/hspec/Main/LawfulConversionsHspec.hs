@@ -15,7 +15,7 @@ isSome a b = describe "IsSome" do
   forM_ (LawfulConversions.isSomeProperties a b) \(name, property) ->
     prop name property
 
-isMany :: (LawfulConversions.IsMany a b, Eq a, Eq b, Show a, Show b, Arbitrary b) => Proxy a -> Proxy b -> Spec
+isMany :: (LawfulConversions.IsMany a b, Eq a, Eq b, Show a, Show b, Arbitrary a, Arbitrary b) => Proxy a -> Proxy b -> Spec
 isMany a b = describe "IsMany" do
   forM_ (LawfulConversions.isManyProperties a b) \(name, property) ->
     prop name property
