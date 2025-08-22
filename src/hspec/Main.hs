@@ -19,13 +19,13 @@ import Prelude
 main :: IO ()
 main = hspec do
   describe "Data.Text.Text" do
-    allIs (Proxy @Data.Text.Text) (Proxy @TextBuilder)
+    allUptoIs (Proxy @Data.Text.Text) (Proxy @TextBuilder)
 
   describe "Data.Text.Lazy.Text" do
-    allIs (Proxy @Data.Text.Lazy.Text) (Proxy @TextBuilder)
+    allUptoIs (Proxy @Data.Text.Lazy.Text) (Proxy @TextBuilder)
 
   describe "Data.Text.Lazy.Builder.Builder" do
-    allIs (Proxy @Data.Text.Lazy.Builder.Builder) (Proxy @TextBuilder)
+    allUptoIs (Proxy @Data.Text.Lazy.Builder.Builder) (Proxy @TextBuilder)
 
   describe "Data.Text.Encoding.StrictBuilder" do
     Main.Conversions.StrictBuilder.spec

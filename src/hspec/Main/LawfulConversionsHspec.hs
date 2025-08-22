@@ -25,8 +25,8 @@ is a b = describe "Is" do
   forM_ (LawfulConversions.isProperties a b) \(name, property) ->
     prop name property
 
-allIs :: (LawfulConversions.Is a b, Eq a, Eq b, Show a, Show b, Arbitrary a, Arbitrary b) => Proxy a -> Proxy b -> Spec
-allIs a b = do
+allUptoIs :: (LawfulConversions.Is a b, Eq a, Eq b, Show a, Show b, Arbitrary a, Arbitrary b) => Proxy a -> Proxy b -> Spec
+allUptoIs a b = do
   describe "Forward" do
     isSome a b
     isMany a b
