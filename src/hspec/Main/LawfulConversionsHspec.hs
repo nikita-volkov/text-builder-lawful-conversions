@@ -36,3 +36,8 @@ allUptoIs a b = do
     isSome b a
     isMany b a
     is b a
+
+allUptoIsMany :: (LawfulConversions.IsMany a b, Eq a, Eq b, Show a, Show b, Arbitrary a, Arbitrary b) => Proxy a -> Proxy b -> Spec
+allUptoIsMany a b = do
+  isSome a b
+  isMany a b

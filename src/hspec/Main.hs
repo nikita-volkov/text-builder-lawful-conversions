@@ -18,6 +18,9 @@ import Prelude
 
 main :: IO ()
 main = hspec do
+  describe "String" do
+    allUptoIsMany (Proxy @String) (Proxy @TextBuilder)
+
   describe "Data.Text.Text" do
     allUptoIs (Proxy @Data.Text.Text) (Proxy @TextBuilder)
 
