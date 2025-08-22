@@ -15,7 +15,7 @@ import TextBuilder (TextBuilder)
 import Prelude
 
 spec :: Spec
-spec = allIs (Proxy @TextBuilder) (Proxy @TextEncoding.StrictBuilder)
+spec = allUptoIs (Proxy @TextBuilder) (Proxy @TextEncoding.StrictBuilder)
 
 instance Eq TextEncoding.StrictBuilder where
   a == b =
