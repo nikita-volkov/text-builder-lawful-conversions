@@ -1,6 +1,6 @@
 cabal-version: 3.0
 name: text-builder-lawful-conversions
-version: 0.1.3
+version: 0.1.4
 category: Text, Builders, Conversions
 synopsis: Orphan instances of "lawful-conversions" for "text-builder"
 homepage: https://github.com/nikita-volkov/text-builder-lawful-conversions
