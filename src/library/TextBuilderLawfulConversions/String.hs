@@ -13,4 +13,4 @@ instance IsSome String TextBuilder where
   maybeFrom = fmap text . maybeFrom
 
 instance IsMany String TextBuilder where
-  from = string
+  onfrom = string
