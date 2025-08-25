@@ -10,7 +10,7 @@ import Test.QuickCheck.Instances ()
 import TextBuilderLawfulConversions ()
 import Prelude
 
-isSome :: (LawfulConversions.IsSome a b, Eq a, Eq b, Show a, Show b, Arbitrary b) => Proxy a -> Proxy b -> Spec
+isSome :: (LawfulConversions.IsSome a b, Eq a, Eq b, Show a, Show b, Arbitrary a, Arbitrary b) => Proxy a -> Proxy b -> Spec
 isSome a b = describe "IsSome" do
   forM_ (LawfulConversions.isSomeProperties a b) \(name, property) ->
     prop name property
